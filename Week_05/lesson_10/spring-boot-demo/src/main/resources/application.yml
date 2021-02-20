@@ -1,0 +1,23 @@
+auto:
+  config:
+    enabled: true
+    student:
+      id: 1
+      name: zhangsan
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 30000
+      minimum-idle: 5
+      maximum-pool-size: 20
+      pool-name: hikari_datasource
+      connection-test-query: select 1
+      idle-timeout: 60000
+      max-lifetime: 180000
+#    type: org.springframework.jdbc.datasource.DriverManagerDataSource
